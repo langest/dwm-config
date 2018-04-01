@@ -72,9 +72,9 @@ static const char *mpdPlayStop[]  = { "mpc", "stop", NULL };
 */
 static const char *randomwp[]     = { "feh", "--randomize", "--recursive", "--bg-fill", "/home/langest/currentWps/", NULL };
 
-static const char *hdmiOff[]      = { "xrandr", "--output", "HDMI-2", "--off", NULL };
-static const char *hdmiMirror[]   = { "xrandr", "--output", "HDMI-2", "--same-as", "LVDS-1", "--auto", NULL };
-static const char *hdmiAbove[]    = { "xrandr", "--output", "HDMI-2", "--above", "LVDS-1", "--auto", NULL };
+static const char *hdmiOff[]      = { "xrandr", "--output", "HDMI2", "--off", NULL };
+static const char *hdmiMirror[]   = { "xrandr", "--output", "HDMI2", "--same-as", "LVDS1", "--mode", "1280x800", NULL };
+static const char *hdmiAbove[]    = { "xrandr", "--output", "HDMI2", "--above", "LVDS1", "--auto", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -142,7 +142,6 @@ static Button buttons[] = {
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
-	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
