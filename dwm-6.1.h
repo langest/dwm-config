@@ -2,27 +2,19 @@
 static const char *fonts[] = { "Droid Sans:size=10", "Inconsolata:size=10", "Droid Sans Japanese:size=10", "WenQuanYi Micro Hei:size=10", "Symbola:size=10" };
 static const char dmenufont[] = "-*-Inconsolata-medium-r-*-*-16-*-*-*-*-*-*-*";
 
-#define WHITE     "#eff0f1"
-#define BLUE      "#3daee9"
-#define BLACK "#2D2D2D"
+#define SELECTED_COLOR "#eff0f1"
+#define FG_COLOR "#ff6700"
+#define BG_COLOR "#2D2D2D"
 
-static const char normbordercolor[] = "#cccccc";
-static const char normbgcolor[]     = "#cccccc";
-static const char normfgcolor[]     = "#000000";
-static const char selbordercolor[]  = "#0066ff";
-static const char selbgcolor[]      = "#0066ff";
-static const char selfgcolor[]      = "#ffffff";
+static unsigned int baralpha        = 0xBB;
+static unsigned int borderalpha     = OPAQUE;
 
-static const char col_fg_normal[]      = BLUE;
-static const char col_bg_normal[]      = BLACK;
-static const char col_boarder_normal[] = BLACK;
-static const char col_fg_selected[]    = BLUE;
-static const char col_bg_selected[]    = WHITE;
-static const char *colors[][3] = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_fg_normal, col_bg_normal, col_boarder_normal },
-	[SchemeSel]  = { col_fg_selected, col_bg_selected,  col_bg_selected  },
-};
+static const char normbordercolor[] = BG_COLOR;
+static const char normbgcolor[]     = BG_COLOR;
+static const char normfgcolor[]     = FG_COLOR;
+static const char selbordercolor[]  = SELECTED_COLOR;
+static const char selbgcolor[]      = FG_COLOR;
+static const char selfgcolor[]      = BG_COLOR;
 
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -67,7 +59,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[]     = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg_normal, "-nf", col_fg_normal, "-sb", col_bg_selected, "-sf", col_fg_selected, NULL };
+static const char *dmenucmd[]     = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb",  normbgcolor, "-nf",  normfgcolor, "-sb",  selbgcolor, "-sf",  selfgcolor, NULL };
 static const char *termcmd[]      = { "urxvtc", NULL };
 static const char *firefoxcmd[]   = { "firefox", NULL };
 static const char *lockcmd[]      = { "sh", "/home/langest/dotfiles/scripts/lock.sh", NULL };
