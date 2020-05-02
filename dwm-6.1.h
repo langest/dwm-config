@@ -1,7 +1,8 @@
 #include "fibonacci.c"
 
 /* appearance */
-static const char *fonts[] = { "Droid Sans:size=10", "Inconsolata:size=10", "Droid Sans Japanese:size=10", "WenQuanYi Micro Hei:size=10", "Symbola:size=10" };
+/* "Font Awesome 5 Free:size:32", */
+static const char *fonts[] = { "Ubuntu:size=10", "Kochi Mincho:size=10" };
 static const char dmenufont[] = "-*-Inconsolata-medium-r-*-*-16-*-*-*-*-*-*-*";
 
 #define SELECTED_COLOR "#eff0f1"
