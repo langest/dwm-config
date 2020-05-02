@@ -5,11 +5,11 @@
 static const char *fonts[] = { "Ubuntu:size=10", "Kochi Mincho:size=10" };
 static const char dmenufont[] = "-*-Inconsolata-medium-r-*-*-16-*-*-*-*-*-*-*";
 
-#define SELECTED_COLOR "#eff0f1"
-#define FG_COLOR "#ff6700"
-#define BG_COLOR "#2D2D2D"
+#define SELECTED_COLOR "#EBDBB2"
+#define FG_COLOR "#D79921"
+#define BG_COLOR "#282828"
 
-static unsigned int baralpha        = 0xBB;
+static unsigned int baralpha        = 0xCC;
 static unsigned int borderalpha     = OPAQUE;
 
 static const char normbordercolor[] = BG_COLOR;
