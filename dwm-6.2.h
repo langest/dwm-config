@@ -82,7 +82,8 @@ static const char *mpdNext[]      = { "mpc", "next", NULL };
 static const char *mpdPlayPause[] = { "mpc", "toggle", NULL };
 static const char *mpdPlayStop[]  = { "mpc", "stop", NULL };
 */
-static const char *randomwp[]     = { "feh", "--randomize", "--recursive", "--bg-fill", "/home/langest/currentWps/", NULL };
+static const char *random_wp_fill[]     = { "feh", "--randomize", "--recursive", "--bg-fill", "/home/langest/img/wps/", NULL };
+static const char *random_wp_tile[]     = { "feh", "--randomize", "--recursive", "--bg-tile", "/home/langest/img/tiling/", NULL };
 
 static const char *hdmiOff[]      = { "xrandr", "--output", "HDMI2", "--off", NULL };
 static const char *hdmiMirror[]   = { "xrandr", "--output", "HDMI2", "--same-as", "LVDS1", "--mode", "1280x800", NULL };
@@ -95,7 +96,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = firefoxcmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd } },
-	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = randomwp } },
+	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = random_wp_fill } },
+	{ MODKEY|ShiftMask,             XK_e,      spawn,          {.v = random_wp_tile } },
 
 	/* Keyboard management */
 	{ MODKEY|ShiftMask,             XK_u,      spawn,          SHCMD("setxkbmap us -option ctrl:nocaps && pkill dwmstatus -SIGUSR1") },
