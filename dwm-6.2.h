@@ -109,7 +109,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_F9,     spawn,          {.v = hdmiAbove} },
 
 	/* Special keys */
-	//Can't get the event for mute button, TODO fix { 0,                       0x1008FF12,     spawn,          SHCMD("amixer set Master -c 0 0% && pkill dwmstatus -SIGUSR1") },
+	{ 0,                       0x1008FF12,     spawn,          SHCMD("amixer set Master -c 0 0% && pkill dwmstatus -SIGUSR1") },
 	{ 0,                       0x1008FF11,     spawn,          SHCMD("amixer set Master -c 0 unmute 2- -M && pkill dwmstatus -SIGUSR1") },
 	{ 0,                       0x1008FF13,     spawn,          SHCMD("amixer set Master -c 0 unmute 2+ -M && pkill dwmstatus -SIGUSR1") },
 	{ 0,                       0x1008FF02,     spawn,          SHCMD("pkill dwmstatus -SIGUSR2") },
