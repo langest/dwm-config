@@ -112,8 +112,8 @@ static Key keys[] = {
 	{ 0,                       0x1008FF12,     spawn,          SHCMD("amixer set Master -c 0 0% && pkill dwmstatus -SIGUSR1") },
 	{ 0,                       0x1008FF11,     spawn,          SHCMD("amixer set Master -c 0 unmute 2- -M && pkill dwmstatus -SIGUSR1") },
 	{ 0,                       0x1008FF13,     spawn,          SHCMD("amixer set Master -c 0 unmute 2+ -M && pkill dwmstatus -SIGUSR1") },
-	{ 0,                       0x1008FF02,     spawn,          SHCMD("pkill dwmstatus -SIGUSR2") },
-	{ 0,                       0x1008FF03,     spawn,          SHCMD("pkill dwmstatus -SIGUSR2") },
+	{ 0,                       0x1008FF02,     spawn,          SHCMD("xbacklight -inc 1 && pkill dwmstatus -SIGUSR2") },
+	{ 0,                       0x1008FF03,     spawn,          SHCMD("xbacklight -dec 1 && pkill dwmstatus -SIGUSR2") },
 
 	/* Window management */
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
