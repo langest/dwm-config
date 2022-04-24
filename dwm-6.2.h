@@ -6,16 +6,8 @@ static const unsigned int gappx     = 6;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Ubuntu:size=10", "Kochi Mincho:size=10" };
-static const char dmenufont[]       = "Ubuntu:size=10";
-
-static const char norm_bg[]      = "#ebdbb2";
-static const char norm_fg[]      = "#282828";
-static const char norm_border[]  = "#282828";
-
-static const char sel_bg[]       = "#689d6a";
-static const char sel_fg[]       = "#282828";
-static const char sel_border[]   = "#b16286";
+static const char *fonts[]          = { "Ubuntu:size=14", "Kochi Mincho:size=14" };
+static const char dmenufont[]       = "Ubuntu:size=14";
 
 /* default colors
 static const char norm_bg[]      = "#222222";
@@ -24,6 +16,30 @@ static const char norm_fg[]      = "#bbbbbb";
 static const char sel_fg[]       = "#eeeeee";
 static const char sel_bg[]       = "#005577";
 */
+
+/* gruvbox theme
+ *
+ * sel_bg options
+ * #cc241d" red
+ * #98971a" green
+ * #458588" blue
+ * #b16286" magenta
+ */
+static const char norm_bg[]      = "#928374";
+static const char norm_fg[]      = "#282828";
+static const char norm_border[]  = "#282828";
+static const char sel_bg[]       = "#282828";
+static const char sel_fg[]       = "#ebdbb2";
+static const char sel_border[]   = "#98971a";
+
+// windows 95
+//static const char norm_bg[]      = "#c0c0c0";
+//static const char norm_border[]  = "#808080";
+//static const char norm_fg[]      = "#000000";
+//
+//static const char sel_fg[]       = "#ffffff";
+//static const char sel_bg[]       = "#000da6";
+//static const char sel_border[]   = "#000da6";
 
 static const char *colors[][3]      = {
 	/*               fg       bg       border   */
