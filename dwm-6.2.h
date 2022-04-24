@@ -55,9 +55,11 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	/* class       instance title tags mask isfloating monitor */
+	{ "Gimp",      NULL,    NULL, 0,        0,         -1 },
+	{ "KeePassXC", NULL,    NULL, 1 << 6,   0,          0 },
+	{ "Chromium",  NULL,    NULL, 1 << 7,   0,          0 },
+	{ "Firefox",   NULL,    NULL, 1 << 8,   0,          1 },
 };
 
 /* layout(s) */
@@ -89,9 +91,10 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_bg, "-sf", sel_fg, NULL };
-static const char *termcmd[]  = { "st", NULL };
-static const char *firefoxcmd[]   = { "firefox", NULL };
-static const char *lockcmd[]      = { "slock", NULL };
+static const char *termcmd[]     = { "st", NULL };
+static const char *firefoxcmd[]  = { "firefox", NULL };
+static const char *chromiumcmd[] = { "chromium", NULL };
+static const char *lockcmd[]     = { "slock", NULL };
 /*
 static const char *mpdPrev[]      = { "mpc", "prev", NULL };
 static const char *mpdNext[]      = { "mpc", "next", NULL };
@@ -111,6 +114,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = firefoxcmd } },
+	{ MODKEY|ShiftMask,             XK_g,      spawn,          {.v = chromiumcmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd } },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = random_wp_fill } },
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          {.v = random_wp_tile } },
